@@ -1,0 +1,65 @@
+Interface -> Puente o conexión
+    La más común:
+        Usuario - Base De Datos
+
+
+GET -> Obtener recurso (datos) LEER
+POST -> Publica recurso (datos) ESCRIBIR (Nuevo)
+PUT -> Actualizar un recurso (datos) ESCRIBIR/ACTUALIZAR
+DELETE -> Elimina por completo (MALA PRACTICA) => Se prefiere el uso de banderas
+
+
+PETICIÓN (request)
+
+=============          =============
+
+    APP         http
+  CLIENTE       ====>     Servidor
+                <====
+                      
+=============          =============
+
+
+Ataque DDOS => Denegación de Sercios
+
+    Arquitectura de alta disponibilidad: Para evitar que el tráfico malicioso dañe mi tráfico real.
+
+    - Servidores extras
+    - Balanceador de carga
+
+
+Nota: Las peticiones NO SON exculsivas de la API
+
+PASOS PARA USAR UNA API
+
+1. Revisar DOCUMENTACIÓN.
+
+    end point: Ruta específica hacia un recurso.
+        ejemplo: "https://edu.devf.la/campus/home"
+            RECURSO = home
+            RUTA = /campus/home
+
+
+API REST
+
+Es una manera de ESTANDARIZAR LAS API'S
+
+    REGLAS:
+
+    * Uso forzoso de id's
+    * Uso de GET, POST, DELETE y PUT
+    * Es stateless (sin estado), ES DECIR, YO NO GUARDO DATOS ANTERIORES
+        //Se hace una petición al servidor -> la procesa -> la responde el servidor -> y si le vuelves a preguntar -> la vuelve a procesar porque NO ALMACENA INFO NI NADA
+    * Exposición del ID en el END POINT
+    * Manejar correctamente los códigos de error
+
+
+NOTA: En la parte de BODY en el POSTMAN en método POST, el BODY, debe ir todo entre comas dobles "".
+
+TIPOS DE ESTADOS
+
+STATUS 200 => EXITO
+STATUS 300 => REDIRECCIÓN
+STATUS 400 => ERROR DEL LADO DEL CLIENTE
+STATUS 500 => ERROR DEL LADO DEL SERVIDOR
+

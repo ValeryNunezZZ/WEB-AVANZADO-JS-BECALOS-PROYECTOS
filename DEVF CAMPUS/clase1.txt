@@ -1,0 +1,41 @@
+EVENT LOOP
+
+Bucle infinito (Ejecuta las tareas pendientes)
+Gestiona la cola de tareas
+Gestiona eventos asíncronos
+
+CALL STACK
+
+Pila de tareas (las más rápidas las resuleve primero)
+
+ASINCRONICIDAD EN JS
+
+Operaciones que pueden completarse en un futuro pero que no detinene el flujo.
+
+CALLBACK
+
+Funciones que se pasan por argumento
+
+PROMESAS
+
+Tres estados posibles: RESOLVE, REJECT, PENDING
+- Se crea la promesa como un objeto tipo promise
+- la promesa tiene como argumentos una función con dos parámetros, RESOLVE y REJECT
+
+
+ASYNC/AWAIT
+
+Permite escribir código asíncrono que parezca síncrono
+
+--------------------------------------------------------------------------------
+
+CLIENTE - SERVIDOR Y POSTMAN
+
+CLIENTE - SERVIDOR define el cómo se comunican un cliente (navegador web) y un servidor x
+
+Para la realización de peticiones de tipo HTTP e usan los siguiente métodos:
+
+GET ->
+PUT -> Actualizar datos en el servidor
+POST -> Obtención o / actualización de los mismos.
+DELETE -> eliminación de datos

@@ -1,0 +1,7 @@
+NODE es un entorno de EJECUCIÓN por lo tanto, SI VAMOS A OUCPAR EL NAVEGADOR => no es conveniente inicializar el NODE
+
+
+AXIOS vs FETCH
+
+AXIOS -> LIBRERÍA BASADA EN PROMESAS
+FETCH -> Es una API

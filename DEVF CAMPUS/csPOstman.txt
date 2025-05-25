@@ -1,0 +1,33 @@
+PROTOCOLO DE LA WEB HTTP
+
+METODOS:
+    * GET
+        Obtiene datos desde el servidor.
+    * POST
+        Envia datos para crear o actualizar info.
+    * PUT
+        Actualiza los datos en el servidor.
+    * DELETE
+        Elimina datos desde el servidor.
+
+
+POSTMAN
+
+Interfaz gráfica que permite:
+    *Probar
+    *Documentar API's
+
+Características:
+
+    * Personalizar encabezados.
+    * Guadar peticiones para pruebas repetitivas.
+    * Enviar solicitudes GET, POST, PUT, DELETE, etc.
+
+EVÍO DE SOLICITUD POR POSTMAN
+
+Formatos posibles en el cuerpo del mensaje:
+    
+    * Texto Plano
+    * JSON : Datos con estructura
+    * Datos de formulario(form-data) : Para enviar datos de un formulario o ARCHIVOS
+    * x-www-form-unlencoded : Igual que form-data pero CODIFICADO EN UNA SOLA LÍNEA

@@ -1,0 +1,51 @@
+SPA -> Single Page Aplication
+    En donde la lógica de envío la meneja Js
+
+FORMULARIOS (form) -> ESTIQUETA SEMÁNTICA (Le da contexto a la página)
+
+Atributo METHOD -> No muy usado(preferible usarlo todo desde js)
+    Tal vez se pueda usar en formularios que:
+        * No requieran validación
+        * Que no se maneje desde JS  
+
+Si queremos cachar el evento SUBMIT es necesario:
+    * Tener un BUTTON con type SUBMIT
+    * Es necesario utilizar el prevent.default para evitar RECARGAR LA PÁGINA
+
+Si queremos que el boton de SUBMIT del fomulario se encuentre fuera de la etiqueta form tenemos que:
+
+    *Ponerle el Atributo FORM e igualarlo con el MISMO NOMBRE del ID que debe de tener nuestro FORM.
+
+¿POR QUÉ ES UNA BUENA PRÁCTICA PONER LABEL-INPUT?
+
+Le da un buen posicionamiento a nuestra PÁGINA
+
+    IMPORTANTE:
+        * Se le pone un id al INPUT
+        * Se le pone un for al LABEL con valor igual a NOMBRE DEL ID DEL INPUT
+
+
+Se usa el atributo NOVALIDATE sin valor para cuando NO QUEREMOS que el  navegador valide nuestro FORMULARIO
+
+
+ATRIBUTOS PARA LOS INPUTS
+
+pattern
+required
+maxlength
+minlength
+autocomplete
+
+
+++++++DESDE JS++++++
+
+Para OBTENER TODA LA DATA DEL FORM:
+    
+    + Object.fromEntries(new FormFata(nombre de la variable en donde se guarda el formulario con querySelect o el selector de su PREFERENCIA))
+
+Para limpiar el formulario:
+
+    + nombre de la variable en donde se guarda el formulario con querySelect o el selector de su PREFERENCIA.reset()
+
+
+evento INVALID -> Cacha los eventos inputs que no pasan la validación
