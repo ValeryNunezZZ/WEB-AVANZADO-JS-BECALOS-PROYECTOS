@@ -3,8 +3,6 @@
 
 const fs = require('fs');
 
-let datos;
-
 
 function leerArchivo(callback){
 
@@ -63,15 +61,25 @@ function mostrarMenu(){
         if(error){
             console.log("ERROR: " + error);
         }else{
-            console.log("MENU\n1. Actualizar Disponibilidad\n2. Agregar libros\n3. Consultar inventario\n\n");
+            console.log("MENU\n1. Actualizar Disponibilidad\n2. Agregar libros\n3. Consultar inventario\n4. Salir\n\n");
 
 
-            let res = 1;
+            let res;
+
+            const rl = readline.createInterface({
+                input: process.stdin,
+                output: process.stdout
+            });
+        
+            rl.question('Opcion: ', (r) => {
+                res = r;
+                rl.close();         
+            
 
             if(res == 1){
 
                 solicitarInformacion((libro) => {
-                    
+
                     // Buscar el libro por título y cambiar la disponibilidad
                     const lib = data.libros.find(l => l.titulo === libro.titulo);
 
@@ -79,17 +87,18 @@ function mostrarMenu(){
                         if(lib.disponible == true) lib.disponible = false;
                         else lib.disponible = true;
 
-                        console.log("✅ Disponibilidad actualizada.");
+                        console.log("Disponibilidad actualizada.");
                     } else {
                         console.log("⚠️ Libro no encontrado.");
                     }
                 
+                    
                     // Escribir de nuevo el archivo con la actualización
                     fs.writeFile('libros.json', JSON.stringify(data, null, 2), (err) => {
                         if (err) {
-                            console.error('❌ Error al escribir el archivo:', err);
+                            console.error('Error al escribir el archivo:', err);
                         } else {
-                            console.log('✅ Archivo actualizado correctamente.');
+                            console.log('Archivo actualizado correctamente.');
                         }
                     });
 
@@ -118,9 +127,9 @@ function mostrarMenu(){
 
                     fs.writeFile('libros.json', JSON.stringify(data, null, 2), (err) => {
                         if (err) {
-                            console.error('❌ Error al escribir el archivo:', err);
+                            console.error('Error al escribir el archivo:', err);
                         } else {
-                            console.log('✅ Libro agregado correctamente.');
+                            console.log('Libro agregado correctamente.');
                         }
                     });
 
@@ -151,7 +160,10 @@ function mostrarMenu(){
                     
                 });
 
+            }else if(res == 4){
+                console.log("\n\nGRACIAS POR SU VISITA :D...")
             }
+            });
         }
         
     });

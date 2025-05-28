@@ -35,6 +35,36 @@
       "autor": "Desconocido",
       "genero": "Infantil",
       "disponible": false
+    },
+    {
+      "titulo": "Bajo la misma estrella",
+      "autor": "John Green",
+      "genero": "Novela",
+      "disponible": true
+    },
+    {
+      "titulo": "Pinocho",
+      "autor": "Desconocido",
+      "genero": "Infantil",
+      "disponible": true
+    },
+    {
+      "titulo": "Pinocho dos",
+      "autor": "Desconocido",
+      "genero": "Infantil",
+      "disponible": true
+    },
+    {
+      "titulo": "Lugares asombrosos",
+      "autor": "Luisito Comunica",
+      "genero": "Aventura",
+      "disponible": true
+    },
+    {
+      "titulo": "Jungla",
+      "autor": "Desconocido",
+      "genero": "Infantil",
+      "disponible": true
     }
   ]
 }
