@@ -1,0 +1,104 @@
+npm init -y : Para inicializar TODO (Agrega el paquete JSON)
+
+GESTOR DE PAQUETES npm
+
+npm install live-server : Para instalar todo el paquete
+npx live-server : Para inicializarlo
+
+Para utlizar MODULOS de NODE 
+
+El script se define  de la siguiente manera:
+
+<script type="module"></script>
+
+
+APP.js punto de entrada -> Esta es la que va a mandar llamar los demás js
+
+novalidate -> Se va a utilizar porque se va a validar con una librería.
+
+
+
+NOTA: Para los íconos de BOOSTRAP es necesario poner el LINK de los ICONOS DE BOOSTRAP
+
+NOTA: En un framework es obligatorio el uso de ciertas reglas de definición de archivos ETC.
+
+NOTA: Es super recomendable el uso de LABEL para el posicionamiento
+
+
+Librería para validación de DATOS con ESQUEMAS
+npm install zod
+
+
+Para importar zod desde el js:
+    import{z} from "zod"
+
+¿Que es un esquema?
+
+Modelo de validaciones
+
+Crear un ESQUEMA
+
+    export nombreDelEsquema = z.object({
+        campos : ...,
+        ...
+        campos n : ...
+    })
+
+    PARAMETROS POSIBLES PARA CADA CAMPO:
+
+    z(nombre con el que importamos).string() : que sea cadena
+    .min(longitud minima de la cadena, "Mensaje de error en caso de no cumplir con la condición")
+    .max(longitud máxima de la cadena, "Mensaje de error en caso de no cumplir con la condición")
+    .email() : para una validación por default con la librería
+    .trim() : Para quitar los espacios inicialeas de la cadena
+    .regex("Expresión regular") : Para poner tu propia expresión regular
+    .opcional() : Define que puede venir nulo
+    .or(lo que se va a ejecutar en caso de que lo primero no se cumpla) : Literalmente es una disyunción
+    .literal("Cadena que espera") : Busca que la variable tenga el mismo valor que el VALUE que se enceuntra entre paréntesis
+
+
+
+Para la importación de los modulos a otro documento JS
+
+import{nombre que querramos} from "dirección relativa del documento"
+
+export const todos = JSON.parse(localStorage.getItem("todos") ?? "[]");
+
+    * Export exporta la variable para que pueda ser utilizada por los módulos
+    * JSON.parse convierte el string a formato JSON
+    * ?? "[]" devuelve un arreglo vacío en caso de que el resultado obtenido sea una cadena vacía
+
+* todos.push({...item, done: false})     
+
+    * ...item hace una copia de lo que se tenga guardado en item al objeto en cuestión
+
+* localStorage.setItem("todos", JSON.stringify(todos))
+
+    * Guarda todos los cambios hechos en el LOCAL STORAGE
+
+
+NOTA: Se le pueden hacer un data set a los ELEMENTOS HTML
+
+    * Para hacerlo sólo es necesario escribir:
+        data-EL NOMBRE QUE QUERRAMOS = VALUE
+
+
+USO DE DESESTRUCUTRACIÓN
+
+const {action, index} = btn.dataset;
+
+    * Se guarda automáticamente los dos datos en las variables action e index recién declarasdas.
+
+
+EN EL EVENTO DE TIPO DE SUBMIT PODEMOS OBTENER LAS ENTRADAS ASÍ:
+
+    const formData = Object.fromEntries(new FormData(nombre del formulario luego de haberlo seleccionado))
+
+
+
+
+    NOTA: SI NO QUEREMOS QUE SE NOS INCLUYA ALGÚN ARCHIVO EN EL REPOSITORIO ES NECESARIO PONER EL NOMBRE DEL ARCHIVO O DE LA CARPETAS U O ARCHIVOS QUE NO QUEREMOS
+
+    Como vamos a poner el node_modules en gitIgnore, es necesario reinstalar las librerías que vamos a utilizar (LAS CUALES YA SE ENCUENTRAN GUARDADAS EN EL PACKAGE.JSON) => ENTONCES SIMPLEMENTE LE VAMOS A DAR npm install (así sin especificar nada)
+
+    ES POSIBLE GENERALIZAR LAS CARPETAS QUE SE VAN A UTILIZAR EN TODAS LAS CARPETAS

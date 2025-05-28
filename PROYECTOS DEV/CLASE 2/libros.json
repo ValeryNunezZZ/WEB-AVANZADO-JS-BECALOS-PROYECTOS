@@ -1,0 +1,40 @@
+{
+  "libros": [
+    {
+      "titulo": "Cien años de soledad",
+      "autor": "Gabriel García Márquez",
+      "genero": "Realismo mágico",
+      "disponible": true
+    },
+    {
+      "titulo": "1984",
+      "autor": "George Orwell",
+      "genero": "Distopía",
+      "disponible": false
+    },
+    {
+      "titulo": "El Hobbit",
+      "autor": "J.R.R. Tolkien",
+      "genero": "Fantasía",
+      "disponible": true
+    },
+    {
+      "titulo": "Orgullo y prejuicio",
+      "autor": "Jane Austen",
+      "genero": "Romántico",
+      "disponible": true
+    },
+    {
+      "titulo": "Fahrenheit 451",
+      "autor": "Ray Bradbury",
+      "genero": "Ciencia ficción",
+      "disponible": false
+    },
+    {
+      "titulo": "Pachi",
+      "autor": "Desconocido",
+      "genero": "Infantil",
+      "disponible": false
+    }
+  ]
+}
