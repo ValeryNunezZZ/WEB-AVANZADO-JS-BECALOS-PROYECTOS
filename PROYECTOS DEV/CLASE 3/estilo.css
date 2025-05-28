@@ -1,0 +1,78 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f0f0f0, #e2e2ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    margin: 0;
+}
+
+.card, .cardAxios{
+    background: white;
+    width: 300px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.card img , .cardAxios img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card .info , .cardAxios .info{
+    padding: 16px;
+}
+
+.card .info h2 , .cardAxios  .info h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #333;
+}
+
+.card .info p, .cardAxios .info .p{
+    margin: 8px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    gap: 10px;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 10px;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.buttons button:hover {
+    background-color: #4b45d1;
+}
+
+.containerAll{
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+h1{
+    text-align: center;
+    color: rgb(201, 201, 255);
+}
