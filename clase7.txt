@@ -1,0 +1,26 @@
+
+Partes importantes de un input:
+
+    * Type: Define el tipo de input
+    * Value: Define el valor de la opción seleccionada
+    * Name: Agrupa los elementos bajo un mismo nombre.
+
+
+Para un checkbox se puede usar:
+
+    checkbox.checked => valida si está checado o no
+        (sea checkbox el nombre del elemento seleccionado)
+
+    
+Se puede hacer también esto para obtener sólo el radio buton que fue seleccionado (RECORDANDO QUE EN RADIO BUTTON SÓLO SE PUEDE ELEGIR UNO DE TODO EL CONJUNTO DE RADIOS ASOCIADOS A UN MISMO NOMBRE):
+
+    * selectRadio = document.querySelector('input[name='nombre del nombre']:checked')
+
+
+* Para tomar el valor de un select es necesario poner el ID de select
+
+Para tomar el archivo
+
+    * Se hace select al input type file así:
+
+        document.getElementById('archivo').files[0]
