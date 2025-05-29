@@ -1,0 +1,15 @@
+Fetch(MÉTODO) --> Permite solicitudes HTTP
+
+Puede hacer uso de:
+
+    * async/await
+    * then() y catch()
+
+DEVUELVE una PROMESA
+
+Se pueden realizar solicitudes:
+
+    * GET
+    * PUT
+    * POST
+    * DELETE
