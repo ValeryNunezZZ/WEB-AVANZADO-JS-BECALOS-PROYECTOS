@@ -1,0 +1,35 @@
+VALIDACIÓN CON ZOD
+
+ZOD -> Biblioteca de validación de esquemas
+
+INSTALACIÓN DE ZOD -> npm install zod 
+
+IMPORTACIÓN DE ZOD EN CÓDIGO -> import { z } from 'zod'
+
+DEFINICIÓN DE ESQUEMAS
+
+Un esquema son la estrucutra o reglas que debe de cumplir los datos
+
+const schema = z.object({
+    name: z.string().min(1,"Mensaje en caso de que no se cumpla la  condición"),
+    age: a.number.int().positive("Mensaje en caso de que el valor de la edad no sea positivo"),
+})
+
+
+APLICAR VALIDACIÓN CON EL MÉTODO PARSE
+
+try{
+    nombreDelEsquema.parse({
+        name: "Juan",
+        age: 25
+    })
+
+    console.log("Datos válidos")
+
+}catch(error){
+    console.error(error.errors);
+}
+
+NOTA: Una manera de agrupa los errores es la siguiente:
+
+    error.errors.map(e => e.message).join(", ")
