@@ -1,0 +1,66 @@
+NODE JS -> Entorno de ejecución
+
+    * Permite ejecutar código en el servidor
+    * No depende del navegador
+
+
+npm -> Gestor de paquetes
+
+    * Gestiona, instala y comparte paquetes necesarios para el uso de la app.
+
+package.json -> Contiene los paquetes, dependencias y configuraciones necesarias de nuestro proyecto.
+
+    * Intalación -> npm init -y
+
+PARA INSTALAR LAS DEPENDENCIAS QUE SE ENCUENTRAN EN EL PACKAGE.JSON:
+
+    * npm install
+
+INSTALACIÓN DE UN PAQUETE:
+
+    * npm install nombreDelPaquete
+
+INSTALACIÓN DE UN PAQUETE DE MANERA GLOBAL:
+
+    * npm install -g nombreDelPaquete
+
+
+TIPOS DE DEPENDENCIAS
+
+    * DEPENDENCIAS DE PRODUCCIÓN
+
+        Necesarias para que la aplicación funcione en PRODUCCIÓN
+
+        npm install nombreDeLaDependencia
+
+    * DEPENDENCIAS DE DESARROLLO
+
+        Utiles durante el desarrollo de la app pero innecesarias para la producción.
+
+        npm install --save-dev nombreDeLaDependencia
+
+
+
+NOMENCLATURA DE LOS PAQUETES EN EL PACKAGE.JSON
+
+    (puede ser sin nada, ^ o ~ )MAJOR.MINOR.PATCH
+
+    sin nada -> instala la versión dicha en la NOMENCLATURA
+    ^ -> Permite actualizaciones menores y parches
+    ~ -> Permite sólo actualizaciones de parches.
+
+    MAYOR -> Cambios mayores y pueden ser incompatibles con la versión mayor.
+    MINOR -> Nuevas funciones pero compatibles con la versión mayor.
+    PATCH -> Corrección de errores menores sin causar incompatibilidad.
+
+
+USO DE COMANDOS PERSONALIZADOS
+
+En el package.json en scripts 
+
+    Se pueden añadir los nombres de los nuevos COMANDOS
+
+    * Ejecución
+
+        npm run nombreDelScript
+
