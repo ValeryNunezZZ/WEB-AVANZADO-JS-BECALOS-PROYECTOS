@@ -1,0 +1,28 @@
+Una API -> SIEMPRE TIENE
+    
+    * UN PUNTO DE ENTRADA
+    * RUTAS: Manaje los casos de uso de la API
+
+HERRAMIENTAS:
+
+    De empaquetamiento -> VITE
+    De deployado -> netlify CI/CD
+
+
+VITE 
+
+Para su Intalación:
+
+    npm init vite@latest . -- -- template vanilla
+
+    El comando anterior se ejecuta en la terminal en la carpeta QUE NOSOTROS CREÉMOS ESPECÍFICAMENTE PARA VITE
+
+    DIFERNCIA ENTRE IMPORT FROM Y REUIRE
+    OPERRADOR DE PROPAGACIÓN
+
+    AXIOS YA TE HACE EL JASON PARSE / FETCH NO
+
+
+
+    HACER EL LOGIN
+    HACER EL UPDATE Y DELETE
