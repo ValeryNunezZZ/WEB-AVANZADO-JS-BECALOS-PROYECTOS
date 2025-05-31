@@ -43,10 +43,14 @@ export async function renderTodoList(ul) {
 
     const todos = await getTodos()
     todos.forEach((todo) => {
+        console.log("TODO LISTO : " + todo.done);
         const li = document.createElement("li");
         li.className =
             "list-group-item d-flex justify-content-between align-items-center";
-        if (todo.done) li.classList.add("done");
+        //if (todo.done) li.classList.add("done");
+        if (todo.done == 1){
+            li.classList.add("text-primary");
+        }
 
         li.innerHTML = `
       <span>${todo.task} <small class="badge bg-info ms-2">${todo.dueDate}</small></span>

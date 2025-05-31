@@ -91,6 +91,7 @@ document.addEventListener('click', async (e) => {
 
     if (action === "toggle") {
         await toggleDone(id);
+        refreshTodos();
         // Aquí podrías hacer una petición al backend o actualizar la UI
     } else if (action === "delete") {
         //alert("delete" +  id);
